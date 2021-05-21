@@ -1,0 +1,13 @@
+#nprogress .bar {
+    height: 4px;
+    background: rgb(39, 39, 39);
+}
+
+#nprogress .spinner-icon {
+    border-top-color: rgb(39, 39, 39);
+    border-left-color: rgb(39, 39, 39);
+}
+
+.nav a:hover {
+    border-radius: 0px;
+}
