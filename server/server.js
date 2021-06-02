@@ -1,16 +1,12 @@
-const express = require('express');
+const express = require("express");
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.render('client/index');
-});
+// import routes
+const authRoutes = require("./routes/auth");
 
-app.get('/api/register', (req, res) => {
-    res.json({
-        data: 'you hit register endpoint bruh'
-    });
-});
+// middlewares
+app.use("/api", authRoutes);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`API is running on port ${port}`));
